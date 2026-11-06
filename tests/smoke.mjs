@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+const html=readFileSync('index.html','utf8');
+const js=readFileSync('app.js','utf8');
+const sw=readFileSync('sw.js','utf8');
+const manifest=JSON.parse(readFileSync('manifest.webmanifest','utf8'));
+for(const f of ['app.js','style.css','manifest.webmanifest','icon.svg','sw.js'])assert.ok(existsSync(f),'Missing '+f);
+for(const id of ['mission','memory','protocol','task','kind','analyze','analysis','log','export','erase','importFile','statTasks','statFeedback','statApproved'])assert.match(html,new RegExp('id="'+id+'"'),'Missing UI control '+id);
+for(const id of ['analyze','export','erase','importFile'])assert.ok(js.includes("$('"+id+"').addEventListener"),'Missing event handler '+id);
+assert.match(js,/localStorage\.setItem/);
+assert.match(js,/status='approved'/);
+assert.match(js,/status='corrected'/);
+assert.match(sw,/fetch\(e\.request\)/);
+assert.equal(manifest.display,'standalone');
+assert.equal(manifest.start_url,'./');
+console.log('FINCH static smoke tests passed');
