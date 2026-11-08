@@ -1,0 +1,78 @@
+{
+  "case_id": "jorn-berntzen-2004",
+  "updated": "2026-11-08",
+  "scope": {
+    "place": "Oslo",
+    "start": "2000-01-01",
+    "end": "2005-12-31"
+  },
+  "events": [
+    {
+      "id": "JB-001",
+      "date": "2004-08-18",
+      "time": null,
+      "type": "reported_assault",
+      "title": "Jørn oppsøker Fredensborg med skader",
+      "description": "VG gjengir journalnotater fra Fredensborg: hodeskade, hevelse, opplysning om overfall og ran.",
+      "evidence": "secondary_reporting_of_records",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap1/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-002",
+      "date": "2004-08-19",
+      "time": "22:24",
+      "type": "emergency_call",
+      "title": "AMK-samtale fra Fredensborg",
+      "description": "VG skriver at AMK-loggen viser en oppringning der Jørn selv oppga å være på Fredensborg; avdelingsoverlege bekreftet fastnummer.",
+      "evidence": "secondary_reporting_of_primary_record",
+      "status": "reported_documentary",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap2/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-003",
+      "date": "2004-08-20",
+      "time": null,
+      "type": "followup",
+      "title": "Bosenteret kontakter sykehus",
+      "description": "VG beskriver at Fredensborg ringte flere sykehus og varslet Uteseksjonen.",
+      "evidence": "secondary_reporting_of_records",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap1/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-004",
+      "date": "2009",
+      "time": null,
+      "type": "investigation",
+      "title": "Ny gjennomgang av saken",
+      "description": "VG beskriver at en etterforsker innhentet logger og journaler og gjennomførte avhør i 2009.",
+      "evidence": "secondary_reporting",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap2/",
+      "case_link": "direct"
+    },
+    {
+      "id": "OSL-001",
+      "date": "2004",
+      "time": null,
+      "type": "context",
+      "title": "Anmeldt kriminalitet i Oslo 2004",
+      "description": "Stortingsmelding oppgir 66 467 anmeldte forbrytelser i Oslo politidistrikt i 2004. Dette er bakgrunnsstatistikk og ikke knyttet til saken.",
+      "evidence": "government_report",
+      "status": "documented",
+      "source": "https://www.regjeringen.no/contentassets/91efc535022e4649821a8d81b31d54e4/no/pdfs/stm200420050042000dddpdfs.pdf",
+      "case_link": "none"
+    }
+  ],
+  "research_questions": [
+    "Hva viser fullstendig AMK-logg om samtalen 19.08.2004?",
+    "Hvilke politidokumenter beskriver etterforskningsskritt i 2004 og 2009?",
+    "Finnes det offentlig dokumentasjon om minibankuttaket, og hva er sikker dato?",
+    "Hvordan ble savnetmeldingen håndtert og når?",
+    "Hvilke samtidige kriminalsaker har en dokumentert, ikke bare geografisk, forbindelse?"
+  ]
+}
