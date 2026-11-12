@@ -1,0 +1,36 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FINCH · Cold Case</title><style>:root{font-family:system-ui,sans-serif;color:#e0f3ed;background:#07151e}body{margin:0}main{max-width:820px;margin:auto;padding:22px 16px}h1{letter-spacing:2px}p,small{color:#a6c7c1;line-height:1.55}.panel{background:#102831;border:1px solid #28535b;border-radius:16px;padding:17px;margin:14px 0}select,input{background:#071a22;color:white;border:1px solid #47727a;border-radius:9px;padding:11px;font-size:16px;max-width:100%}label{display:block;margin:12px 0 5px}.item{border-left:3px solid #64dbc4;padding:8px 14px;margin:14px 0;background:#17353d}.date{color:#8ad9ca;font-size:13px}.tag{font-size:12px;color:#f1d69c}a{color:#79e6d3}button{background:#65dbc2;border:0;border-radius:10px;padding:11px;font-weight:bold;cursor:pointer}#count{font-size:13px;color:#a6c7c1}</style></head><body><main><small>THE MACHINE / PROJECT FINCH / RESEARCH MODE</small><h1>COLD CASE AI</h1><p>Kildebasert historisk analyse · Oslo 2000–2005. Prototypen viser manuelt registrerte kilder, ikke automatisk etterforskning.</p><section class="panel"><h2>Jørn Berntzen · 2004</h2><p>Hovedsak: rekonstruksjon av de siste dokumenterte kontaktene. Opplysninger fra presse må kontrolleres mot primærkilder der det er mulig.</p><label for="q">Søk i hendelser</label><input id="q" type="search" placeholder="Dato, sted eller emne"><label for="kind">Hendelsestype</label><select id="kind"><option value="">Alle</option><option value="reported_assault">Oppgitt vold</option><option value="emergency_call">Nødsamtale</option><option value="followup">Oppfølging</option><option value="investigation">Etterforskning</option><option value="context">Historisk kontekst</option></select><label for="link">Tilknytning</label><select id="link"><option value="">Alle</option><option value="direct">Hovedsaken</option><option value="none">Kun historisk kontekst</option></select><p id="count" aria-live="polite"></p><p id="loadStatus" role="status"></p><div id="events"></div></section><section class="panel"><h2>Forskningsspørsmål</h2><p>Finnes det dokumentasjon på observasjoner etter AMK-samtalen? Hvilke opptak ble sikret eller slettet? Hva viser samtidige rapporter om ran og politiets kapasitet?</p><p><strong>Metode:</strong> Samtidighet eller geografisk nærhet er ikke bevis på sammenheng. Ingen ansiktsgjenkjenning, identitetssporing eller automatiske mistanker.</p><a href="./README.md">Les forskningsprotokollen</a></section><script>
+"use strict";
+const q=document.querySelector("#q"),kind=document.querySelector("#kind"),link=document.querySelector("#link"),target=document.querySelector("#events"),count=document.querySelector("#count"),loadStatus=document.querySelector("#loadStatus");
+let events=[];
+const safeUrl=url=>{try{const parsed=new URL(url);return ["https:","http:"].includes(parsed.protocol)?parsed.href:null}catch{return null}};
+function render(){
+ const query=q.value.toLocaleLowerCase("nb").trim();
+ const matches=events.filter(e=>(!kind.value||e.type===kind.value)&&(!link.value||e.case_link===link.value)&&[e.id,e.date,e.time,e.title,e.description,e.status].join(" ").toLocaleLowerCase("nb").includes(query)).sort((a,b)=>(a.date+" "+(a.time||"")).localeCompare(b.date+" "+(b.time||"")));
+ count.textContent=matches.length+" av "+events.length+" kildeoppføringer";
+ target.replaceChildren();
+ for(const e of matches){
+  const div=document.createElement("article");div.className="item";
+  const date=document.createElement("div");date.className="date";date.textContent=e.date+(e.time?" kl. "+e.time:"");
+  const title=document.createElement("h3");title.textContent=e.title;
+  const p=document.createElement("p");p.textContent=e.description;
+  const tag=document.createElement("div");tag.className="tag";tag.textContent=e.id+" · "+e.status+" · "+(e.case_link==="direct"?"Hovedsak":"Historisk kontekst");
+  div.append(date,title,p,tag);
+  const href=safeUrl(e.source);if(href){const a=document.createElement("a");a.href=href;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Åpne kilde";div.append(a)}
+  target.append(div);
+ }
+}
+async function loadCase(){
+ loadStatus.textContent="Laster kildebasen…";
+ try{
+  const response=await fetch("./cases/jorn-berntzen-2004.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  const data=await response.json();
+  if(!data||!Array.isArray(data.events))throw new Error("Ugyldig saksformat");
+  events=data.events.filter(e=>e&&typeof e.id==="string"&&typeof e.date==="string"&&typeof e.title==="string"&&typeof e.description==="string");
+  loadStatus.textContent="Saksfil lastet: "+data.case_id+". Kildestatus må vurderes manuelt.";
+  render();
+ }catch(error){loadStatus.textContent="Kunne ikke laste saksfilen ("+error.message+"). Åpne siden via en publisert nettside, ikke som lokal fil.";count.textContent="Ingen data lastet"}
+}
+for(const el of [q,kind,link])el.addEventListener(el===q?"input":"change",render);
+loadCase();
+</script></main></body></html>

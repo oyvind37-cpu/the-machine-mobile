@@ -1,0 +1,174 @@
+{
+  "case_id": "jorn-berntzen-2004",
+  "updated": "2026-11-08",
+  "scope": {
+    "place": "Oslo",
+    "start": "2000-01-01",
+    "end": "2005-12-31"
+  },
+  "events": [
+    {
+      "id": "JB-001",
+      "date": "2004-08-18",
+      "time": null,
+      "type": "reported_assault",
+      "title": "Jørn oppsøker Fredensborg med skader",
+      "description": "VG gjengir journalnotater fra Fredensborg: hodeskade, hevelse, opplysning om overfall og ran.",
+      "evidence": "secondary_reporting_of_records",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap1/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-002",
+      "date": "2004-08-19",
+      "time": "22:24",
+      "type": "emergency_call",
+      "title": "AMK-samtale fra Fredensborg",
+      "description": "VG skriver at AMK-loggen viser en oppringning der Jørn selv oppga å være på Fredensborg; avdelingsoverlege bekreftet fastnummer.",
+      "evidence": "secondary_reporting_of_primary_record",
+      "status": "reported_documentary",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap2/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-003",
+      "date": "2004-08-20",
+      "time": null,
+      "type": "followup",
+      "title": "Bosenteret kontakter sykehus",
+      "description": "VG beskriver at Fredensborg ringte flere sykehus og varslet Uteseksjonen.",
+      "evidence": "secondary_reporting_of_records",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap1/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-004",
+      "date": "2009",
+      "time": null,
+      "type": "investigation",
+      "title": "Ny gjennomgang av saken",
+      "description": "VG beskriver at en etterforsker innhentet logger og journaler og gjennomførte avhør i 2009.",
+      "evidence": "secondary_reporting",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap2/",
+      "case_link": "direct"
+    },
+    {
+      "id": "OSL-001",
+      "date": "2004",
+      "time": null,
+      "type": "context",
+      "title": "Anmeldt kriminalitet i Oslo 2004",
+      "description": "Stortingsmelding oppgir 66 467 anmeldte forbrytelser i Oslo politidistrikt i 2004. Dette er bakgrunnsstatistikk og ikke knyttet til saken.",
+      "evidence": "government_report",
+      "status": "documented",
+      "source": "https://www.regjeringen.no/contentassets/91efc535022e4649821a8d81b31d54e4/no/pdfs/stm200420050042000dddpdfs.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "OSL-RAN-2000",
+      "date": "2000",
+      "time": null,
+      "type": "context",
+      "title": "Personran i Oslo politidistrikt 2000",
+      "description": "Politiets trendrapport 2012 oppgir 579 ran og 176 grove ran (sum 755). Ikke-justerte anmeldelsestall. Ingen dokumentert kobling til Jørn-saken.",
+      "evidence": "police_statistics",
+      "status": "documented",
+      "source": "https://fido.nrk.no/f444d6eb4fbde1991769d878089801958e7718a3115f87d1d9d19693b57ae7b4/Vedlegg_1549.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "OSL-RAN-2001",
+      "date": "2001",
+      "time": null,
+      "type": "context",
+      "title": "Personran i Oslo politidistrikt 2001",
+      "description": "Politiets trendrapport 2012 oppgir 511 ran og 193 grove ran (sum 704). Ikke-justerte anmeldelsestall. Ingen dokumentert kobling til Jørn-saken.",
+      "evidence": "police_statistics",
+      "status": "documented",
+      "source": "https://fido.nrk.no/f444d6eb4fbde1991769d878089801958e7718a3115f87d1d9d19693b57ae7b4/Vedlegg_1549.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "OSL-RAN-2002",
+      "date": "2002",
+      "time": null,
+      "type": "context",
+      "title": "Personran i Oslo politidistrikt 2002",
+      "description": "Politiets trendrapport 2012 oppgir 661 ran og 167 grove ran (sum 828). Ikke-justerte anmeldelsestall. Ingen dokumentert kobling til Jørn-saken.",
+      "evidence": "police_statistics",
+      "status": "documented",
+      "source": "https://fido.nrk.no/f444d6eb4fbde1991769d878089801958e7718a3115f87d1d9d19693b57ae7b4/Vedlegg_1549.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "OSL-RAN-2003",
+      "date": "2003",
+      "time": null,
+      "type": "context",
+      "title": "Personran i Oslo politidistrikt 2003",
+      "description": "Politiets trendrapport 2012 oppgir 527 ran og 175 grove ran (sum 702). Ikke-justerte anmeldelsestall. Ingen dokumentert kobling til Jørn-saken.",
+      "evidence": "police_statistics",
+      "status": "documented",
+      "source": "https://fido.nrk.no/f444d6eb4fbde1991769d878089801958e7718a3115f87d1d9d19693b57ae7b4/Vedlegg_1549.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "OSL-RAN-2004",
+      "date": "2004",
+      "time": null,
+      "type": "context",
+      "title": "Personran i Oslo politidistrikt 2004",
+      "description": "Politiets trendrapport 2012 oppgir 670 ran og 178 grove ran (sum 848). Ikke-justerte anmeldelsestall. Ingen dokumentert kobling til Jørn-saken.",
+      "evidence": "police_statistics",
+      "status": "documented",
+      "source": "https://fido.nrk.no/f444d6eb4fbde1991769d878089801958e7718a3115f87d1d9d19693b57ae7b4/Vedlegg_1549.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "OSL-RAN-2005",
+      "date": "2005",
+      "time": null,
+      "type": "context",
+      "title": "Personran i Oslo politidistrikt 2005",
+      "description": "Politiets trendrapport 2012 oppgir 547 ran og 142 grove ran (sum 689). Ikke-justerte anmeldelsestall. Ingen dokumentert kobling til Jørn-saken.",
+      "evidence": "police_statistics",
+      "status": "documented",
+      "source": "https://fido.nrk.no/f444d6eb4fbde1991769d878089801958e7718a3115f87d1d9d19693b57ae7b4/Vedlegg_1549.pdf",
+      "case_link": "none"
+    },
+    {
+      "id": "JB-005",
+      "date": "2004-08-19",
+      "time": null,
+      "type": "followup",
+      "title": "Jørn forlater legevakten før legeundersøkelse",
+      "description": "VG beskriver at han forlot legevakten natt til 19. august etter transport fra Fredensborg. Tidspunkt for avgang er ikke bekreftet her.",
+      "evidence": "secondary_reporting_of_records",
+      "status": "reported",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/kap1/",
+      "case_link": "direct"
+    },
+    {
+      "id": "JB-006",
+      "date": "2018",
+      "time": null,
+      "type": "investigation",
+      "title": "VG publiserer dokumentarundersøkelse",
+      "description": "VG publiserer dokumentarserien Jørn – pappaen som forsvant, med gjennomgang av dokumentasjon og pårørendes beretninger.",
+      "evidence": "published_investigation",
+      "status": "documented",
+      "source": "https://www.vg.no/spesial/2018/pappaen-som-forsvant/",
+      "case_link": "direct"
+    }
+  ],
+  "research_questions": [
+    "Hva viser fullstendig AMK-logg om samtalen 19.08.2004?",
+    "Hvilke politidokumenter beskriver etterforskningsskritt i 2004 og 2009?",
+    "Finnes det offentlig dokumentasjon om minibankuttaket, og hva er sikker dato?",
+    "Hvordan ble savnetmeldingen håndtert og når?",
+    "Hvilke samtidige kriminalsaker har en dokumentert, ikke bare geografisk, forbindelse?"
+  ]
+}
